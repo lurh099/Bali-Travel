@@ -72,27 +72,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const dateLine = document.querySelector('.date-line');
-
-    function toggleLineBreak() {
-        if (window.innerWidth <= 480) {
-            // Überprüfen, ob das <br> bereits eingefügt wurde, um Duplikate zu vermeiden
-            if (!dateLine.querySelector('br')) {
-                const lineBreak = document.createElement('br');
-                dateLine.appendChild(lineBreak); // <br> am Ende der Zeile einfügen
+    
+    function toggleLineBreaks() {
+        if (window.innerWidth <= 768) {
+            // <br> vor der Zeile einfügen, falls noch nicht vorhanden
+            if (!dateLine.previousElementSibling || dateLine.previousElementSibling.tagName !== 'BR') {
+                const lineBreakBefore = document.createElement('br');
+                dateLine.parentNode.insertBefore(lineBreakBefore, dateLine);
+            }
+            
+            // <br><br> am Ende der Zeile einfügen, falls noch nicht vorhanden
+            const existingBrs = dateLine.querySelectorAll('br');
+            if (existingBrs.length < 2) {
+                const lineBreak1 = document.createElement('br');
+                const lineBreak2 = document.createElement('br');
+                dateLine.appendChild(lineBreak1);
+                dateLine.appendChild(lineBreak2);
             }
         } else {
-            // <br> entfernen, wenn die Breite wieder über 480px ist
-            const existingLineBreak = dateLine.querySelector('br');
-            if (existingLineBreak) {
-                dateLine.removeChild(existingLineBreak);
+            // Entferne alle <br>-Elemente (vor und nach der Zeile)
+            
+            // <br> vor der Zeile entfernen
+            if (dateLine.previousElementSibling && dateLine.previousElementSibling.tagName === 'BR') {
+                dateLine.previousElementSibling.remove();
             }
+            
+            // Alle <br> innerhalb der Zeile entfernen
+            const existingBrs = dateLine.querySelectorAll('br');
+            existingBrs.forEach(br => br.remove());
         }
     }
 
     // Funktion bei Seitenaufruf und Fenstergrößenänderung ausführen
-    toggleLineBreak();
-    window.addEventListener('resize', toggleLineBreak);
+    toggleLineBreaks();
+    window.addEventListener('resize', toggleLineBreaks);
 });
+
+
+
+
 
 
 

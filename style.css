@@ -64,6 +64,7 @@ h2 {
 /* Navigation */
 
 .navigation {
+    display: inline-block;
     height: 134px;
     width: 100%;
     background-color: white;
@@ -225,6 +226,10 @@ header {
     background-color: skyblue;
 }
 
+.tourfakten h2 {
+    margin-top: 0;
+}
+
 .tourfakten ul {
     margin-top: 1.7em;
     /* margin-bottom: 1.7em; */
@@ -274,12 +279,13 @@ footer > .navigation {
 
 .scroll-top {
     position: fixed;
-    top: 50%; /* Vertikal zentrieren */
-    transform: translateY(-50%); /* Verschiebt den Button genau in die Mitte */
-    right: 20px; /* Abstand vom rechten Rand */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
     background-color: orange;
     color: white;
-    padding: 15px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     text-align: center;
     font-size: 24px;
@@ -288,6 +294,7 @@ footer > .navigation {
     transition: opacity 0.3s ease;
     opacity: 0;
     pointer-events: none;
+    line-height: 40px; /* Vertikale Zentrierung */
 }
 
 .scroll-top.show {
@@ -327,8 +334,24 @@ footer > .navigation {
     h1 {
         font-size: 50pt;
     }
-    .navigation li {
-        font-size: 15pt;
+
+    #logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #home > .navigation {
+        display: flex;
+        height: 100px;
+    }
+
+    #home > .navigation ul {
+        display: flex;
+        margin-top: 70px;
+    }
+
+    #home > .navigation li {
+        font-size: 20pt;
         margin-right: 15px;
     }
 
