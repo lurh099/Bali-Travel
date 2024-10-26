@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Travel Adventure</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+<!-- Kopfbereich -->
+
+    <div id="home" class="container-header">
+      <nav class="navigation">
+        <img id="logo" src="img/logo.png" alt="Logo">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#tour" class="nav-link">Tour</a></li>
+          <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        </ul>
+      </nav>
+      <header>
+        <div class="headtext">
+          <h1>Bali Travel</h1>
+          <p>Dein Bali Abenteuer</p>
+          <a href="#kontakt"><p class="button">Jetzt Buchen</p></a>
+        </div>
+      </header>
+    </div>
+
+<!-- Contentbereich -->
+
+    <section class="willkommen">
+      <div class="container">
+        <h2>Willkommen bei Bali Travel</h2>
+        <p>Dein entspannter Abenteuer Urlaub beginnt jetzt! Bali ist die Insel für einen perfekten Urlaub.</p>
+        <p>Entspanne an den schönsten Traumstränden der Welt und genieße den Blick auf das türkisfarbene Meer.</p>
+        <p>Du kannst im Meer die Seele baumeln lassen und beim Schnorcheln die schöne Unterwasserwelt von Bali kennenlernen.</p>
+        <p>Zwischendurch kannst du mit unseren Guides durch den Dschungel von Bali reisen und kannst die Natur und Tierwelt von Indonesien kennenlernen.</p>
+        <p>Du reist ausserdem an die kulturell wichtigsten Attraktionen, die die Insel zu bieten hat.</p>
+        <p>Wir bringen dich abseits der Touristenmagneten ganz nah an die Menschen dran, die hier leben.</p>
+        <p>So lernst du den Einheimischen Humor sowie Ess- und Trinkgewohnheiten kennen. Der Spaß ist garantiert und hier sind schon etliche Freundschaften entstanden!</p>
+        <p>Bali ist einfach ein Traum. Lasse diesen Traum für dich wahr werden!</p>     
+      </div>
+    </section>
+    <div class="teaser"></div>
+    <section id="tour" class="tour">
+      <div class="container">
+        <h2>Bali Tour in Bildern</h2>
+        <div class="row">
+          <div class="col-3">
+            <div class="card" id="abenteuer">
+              <span>Abenteuer</span>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" id="entspannung">
+              <span>Entspannung</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="card" id="kultur">
+              <span>Kultur</span>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card" id="spaß">
+              <span>Spaß</span>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+    <section class="tourfakten">
+      <div class="container">
+        <h2>Tourfakten</h2>
+        <ul>
+          <li>230 Orte</li>
+          <li>All-Inkl.</li>
+          <li>4 Hotels</li>
+          <li>332km Strecke</li>
+        </ul>
+      </div>  
+    </section>
+    <section id="kontakt" class="kontakt">
+      <div class="container">
+        <div class="row">
+          <h2>Jetzt Buchen</h2>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <p>Frage jetzt unverbindlich an!</p>
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="name">Name:</label>
+          </div>
+          <div class="col-3">
+            <input class="input-felder" type="text" name="name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="telefonnummer">Telefonnummer:</label>
+          </div>
+          <div class="col-3">
+            <input class="input-felder" type="tel" name="telefonnummer" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="email">E-Mail:</label>
+          </div>
+          <div class="col-3">
+            <input class="input-felder" type="email" name="email" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="datum">Reisezeit:</label>
+          </div>
+          <div class="col-3">
+            von <input type="date" name="datum" required>
+            bis <input type="date" name="datum" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <label for="nachricht">Nachricht:</label>
+          </div>
+          <div class="col-3">
+            <textarea rows="10" cols="40" name="nachricht" id="" placeholder="Schreibe eine Nachricht ..."></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <input type="checkbox" name="datenschutz" required> Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen.
+          </div>
+          <div class="col-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <input class="button" type="submit" name="absendenknop" value="Absenden">  
+          </div>
+          <div class="col-3"></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#tour" class="nav-link">Tour</a></li>
+          <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <a href="#home" class="scroll-top" id="scrollTopButton">↑</a>
+
+
+    <script src="main.js"></script>
+  </body>
+</html>

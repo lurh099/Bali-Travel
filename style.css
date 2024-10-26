@@ -1,0 +1,327 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 15pt;
+}
+
+.container-header {
+    width: 100%;
+    background-image: url(img/lagoon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Grid-System */
+
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.row::after {
+    content: "";
+    clear: both;     /*<-----  CLEARFIXHACK */
+    display: block;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+}
+
+.col-1 { width: 16.666%; }
+.col-2 { width: 33.333%; }
+.col-3 { width: 50%;     }
+.col-6 { width: 100%;    }
+
+/* Überschriften */
+
+h1 {
+    font-size: 60pt;
+    font-family: fantasy;
+    margin: 40pt 0;
+    text-align: center;
+}
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.675em;
+    font-weight: bold;
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+    text-align: center;
+}
+
+/* Navigation */
+
+.navigation {
+    height: 134px;
+    width: 100%;
+    background-color: white;
+}
+
+.navigation ul {
+    display: inline-block;
+}
+
+.navigation li {
+    display: inline-block;
+    font-family: fantasy;
+    color: darkgray;
+    font-size: 20pt;
+    margin-right: 20px;
+}
+
+.navigation a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.navigation a.active {
+    color: black;
+}
+
+.navigation a {
+    color: darkgray;
+    text-decoration: none;
+}
+
+
+#logo {
+    width: 128px;
+    height: 128px;
+}
+
+/* Kopfbereich */
+
+header {
+    width: 100%;
+    height: 546px;
+}
+
+.headtext {
+    text-align: center;
+    padding-top: 150px;
+    text-transform: uppercase;
+    color: orange;
+    font-family: sans-serif;
+}
+
+.button {
+    background-color: orange;
+    color: mediumaquamarine;
+    margin-top: 50px;
+    padding: 20px;
+    max-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    transition: transform 2s ease, border-radius 2s ease, background-color .2s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    border-radius: 15px;
+    background-color: rgba(255, 166, 0, 0.938);
+}
+
+.button:active {
+    background-color: rgba(255, 140, 0, 0.918);
+    color: aquamarine;
+}
+
+.headtext a {
+    text-decoration: none;
+    font-weight: bold;
+    ;
+}
+
+/* Willkommen Sektion */
+
+.willkommen {
+    background-color: white;
+}
+
+.willkommen p {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.teaser {
+    width: 100%;
+    height: 364px;
+    background-image: url(img/fields.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Tour Sektion */
+
+.tour {
+    width: 100%;
+    height: 566px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    font-size: 20pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#abenteuer {
+    height: 300px;
+    background-image: url(img/culture.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#entspannung {
+    height: 300px;
+    background-image: url(img/beach.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#kultur {
+    height: 300px;
+    background-image: url(img/women.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#spaß {
+    height: 300px;
+    background-image: url(img/nature1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tourfakten {
+    display: inline-block;
+    width: 100%;
+    height: 298px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    /* font-size: 25pt; */
+    background-color: skyblue;
+}
+
+.tourfakten ul {
+    margin-top: 1.7em;
+    margin-bottom: 1.7em;
+}
+
+.tourfakten li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.675em;
+}
+
+/* Kontakt-Bereich */
+
+.kontakt .row {
+    margin-bottom: 20px;
+}
+
+.kontakt .button {
+    color: black;
+    font-weight: bolder;
+    border: none;
+    font-size: 16px;
+    transition: transform 1s ease, border-radius 1s ease, background-color .2s ease;
+}
+
+.kontakt .button:hover {
+    transform: scale(1.1);
+    border-radius: 15px;
+    background-color: rgba(255, 166, 0, 0.938);
+}
+
+.kontakt .button:active {
+    background-color: rgba(255, 140, 0, 0.918);
+}
+
+/* Footer-Bereich */
+
+footer > .navigation {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-color: skyblue;
+}
+
+/* Home-Button */
+
+.scroll-top {
+    position: fixed;
+    top: 50%; /* Vertikal zentrieren */
+    transform: translateY(-50%); /* Verschiebt den Button genau in die Mitte */
+    right: 20px; /* Abstand vom rechten Rand */
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-top:hover {
+    background-color: darkorange;
+}
+
+
+/* Media-Queries */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-3 { width: 100%;     }
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tour > .container {
+        max-width: 100%;
+    }
+    h2 {
+        margin-top: 1.3em;
+        margin-bottom: 1.3em;
+    }
+
+    h1 {
+        font-size: 50pt;
+    }
+}

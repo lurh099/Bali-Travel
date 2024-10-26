@@ -1,0 +1,39 @@
+Menü:
+  Home, Tour, Kontakt
+
+Kopfbereich
+
+Bali Travel
+Dein Bali Abenteuer
+Knopf: Jetzt Buchen (Link zu Formular)
+
+Begrüßung:
+
+Willkommen bei Bali Travel
+Dein entspannter Abenteuer Urlaub beginnt jetzt! Bali ist die Insel für einen perfekten Urlaub.
+Entspanne an den schönsten Traumstränden der Welt und genieße den Blick auf das türkisfarbene Meer.
+Du kannst im Meer die Seele baumeln lassen und beim Schnorcheln die schöne Unterwasserwelt von Bali kennenlernen.
+Zwischendurch kannst du mit unseren Guides durch den Dschungel von Bali reisen und kannst die Natur und Tierwelt von Indonesien kennenlernen.
+Du reist ausserdem an die kulturell wichtigsten Attraktionen, die die Insel zu bieten hat.
+Wir bringen dich abseits der Touristenmagneten ganz nah an die Menschen dran, die hier leben.
+So lernst du den Einheimischen Humor sowie Ess- und Trinkgewohnheiten kennen. Der Spaß ist garantiert und hier sind schon etliche Freundschaften entstanden!
+Bali ist einfach ein Traum. Lasse diesen Traum für dich wahr werden!
+
+Bali Tour in Bildern
+Bilder zeigen in 2x2Raster
+- Abenteuer
+- Entspannung
+- Kultur
+- Spaß
+
+Tourfakten als Horizontale Liste
+230 Orte
+All-Inkl.
+4 Hotels
+332km Strecke
+
+Jetzt buchen - Formular:
+
+dasselbe Formular, wie bei Kathi nur leicht angepasst :-)
+
+Als Footer, nochmal das Menu, aber zentriert.
