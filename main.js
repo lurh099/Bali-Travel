@@ -73,6 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const dateLine = document.querySelector('.date-line');
     
+    // <br> am Ende der Zeile immer einfügen, falls noch nicht vorhanden
+    if (!dateLine.nextElementSibling || dateLine.nextElementSibling.tagName !== 'BR') {
+        const lineBreakAfter = document.createElement('br');
+        dateLine.parentNode.insertBefore(lineBreakAfter, dateLine.nextElementSibling);
+    }
+
     function toggleLineBreaks() {
         if (window.innerWidth <= 768) {
             // <br> vor der Zeile einfügen, falls noch nicht vorhanden
@@ -80,26 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const lineBreakBefore = document.createElement('br');
                 dateLine.parentNode.insertBefore(lineBreakBefore, dateLine);
             }
-            
-            // <br><br> am Ende der Zeile einfügen, falls noch nicht vorhanden
-            const existingBrs = dateLine.querySelectorAll('br');
-            if (existingBrs.length < 2) {
-                const lineBreak1 = document.createElement('br');
-                const lineBreak2 = document.createElement('br');
-                dateLine.appendChild(lineBreak1);
-                dateLine.appendChild(lineBreak2);
-            }
         } else {
-            // Entferne alle <br>-Elemente (vor und nach der Zeile)
-            
-            // <br> vor der Zeile entfernen
+            // Entferne das <br> vor der Zeile, falls vorhanden
             if (dateLine.previousElementSibling && dateLine.previousElementSibling.tagName === 'BR') {
                 dateLine.previousElementSibling.remove();
             }
-            
-            // Alle <br> innerhalb der Zeile entfernen
-            const existingBrs = dateLine.querySelectorAll('br');
-            existingBrs.forEach(br => br.remove());
         }
     }
 
@@ -107,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleLineBreaks();
     window.addEventListener('resize', toggleLineBreaks);
 });
+
+
 
 
 
