@@ -68,6 +68,33 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Reisezeitformular für 480px Bildschime formatieren
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dateLine = document.querySelector('.date-line');
+
+    function toggleLineBreak() {
+        if (window.innerWidth <= 480) {
+            // Überprüfen, ob das <br> bereits eingefügt wurde, um Duplikate zu vermeiden
+            if (!dateLine.querySelector('br')) {
+                const lineBreak = document.createElement('br');
+                dateLine.appendChild(lineBreak); // <br> am Ende der Zeile einfügen
+            }
+        } else {
+            // <br> entfernen, wenn die Breite wieder über 480px ist
+            const existingLineBreak = dateLine.querySelector('br');
+            if (existingLineBreak) {
+                dateLine.removeChild(existingLineBreak);
+            }
+        }
+    }
+
+    // Funktion bei Seitenaufruf und Fenstergrößenänderung ausführen
+    toggleLineBreak();
+    window.addEventListener('resize', toggleLineBreak);
+});
+
+
 
 
 

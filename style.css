@@ -47,13 +47,13 @@ body {
 
 h1 {
     font-size: 60pt;
-    font-family: fantasy;
+    font-family: fantasy, Impact, sans-serif;
     margin: 40pt 0;
     text-align: center;
 }
 
 h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, sans-serif, Haettenschweiler, 'Arial Narrow Bold';
     font-size: 1.675em;
     font-weight: bold;
     margin-top: 1.7em;
@@ -212,7 +212,10 @@ header {
 }
 
 .tourfakten {
-    display: inline-block;
+    /* display: inline-block; */
+    display:  flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 298px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -224,7 +227,7 @@ header {
 
 .tourfakten ul {
     margin-top: 1.7em;
-    margin-bottom: 1.7em;
+    /* margin-bottom: 1.7em; */
 }
 
 .tourfakten li {
@@ -276,7 +279,7 @@ footer > .navigation {
     right: 20px; /* Abstand vom rechten Rand */
     background-color: orange;
     color: white;
-    padding: 10px 15px;
+    padding: 15px;
     border-radius: 50%;
     text-align: center;
     font-size: 24px;
@@ -323,5 +326,16 @@ footer > .navigation {
 
     h1 {
         font-size: 50pt;
+    }
+    .navigation li {
+        font-size: 15pt;
+        margin-right: 15px;
+    }
+
+    .headtext {
+        padding-top: 125px;
+    }
+    .kontakt textarea {
+        width: 100%;
     }
 }
